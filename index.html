@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Maze runner</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex row justify-content-around container-game">
+    
+        <div id="scorescreen" class="hideScreen flex-column nowrap justify-content-between">
+            <span id="time"><h2>Time </h2></span>
+            <span id="score"><h2>Score: 0</h2></span>
+            <span id="life"><h2>Life: 0</h2></span>
+            <span id="speed"><h2>Speed: 0</h2></span>
+  
+          <button onclick="window.location.href='index.html'">Home</button>
+          <button id="reset">Reset</button>
+          <button onclick="window.alert('GAME PAUSED!')">PAUSE</button>
+          </div>  
+
+           <canvas id="canvas" class="hideScreen" width="1100" height="600"></canvas>
+    
+    </div>
+ 
+
+  
+    <div id="home" class="home-container">
+      <div class="header-images">
+        <img id="amazon-intro" class="amazon-img" src="img/Amazon/amazon-intro-bw.png" />
+        <img class="centerlogo" src="img/title.png" />
+        <img id="barbarian-intro" class="barbarian-img" src="img/Barbarian/barbarian-intro-bw.png" />
+        <button id="helpButton"><a href="instructions.html">HELP</a></button>
+      </div>
+
+      <div class="habilities">
+
+          <div id="amazon-habilities" class="col-3">
+            <h2 class="speed">HEALTH</h2>
+            <img src="img/Amazon/health.png" />
+            <h2 class="speed">SPEED</h2>
+            <img src="img/Amazon/speed.png" />
+          </div>
+  
+          <div id="player" class="player col-5">
+            <h1 class="blink_me">SELECT PLAYER TO PLAY</h1>
+            <div class="instructions">
+              
+              <div><img src="img/directions-glow.png" width="65px"/> <span>Use direction arrows to move along the maze. </span></div>
+              
+              <div><img src="img/items/monster-glow.png" width="65px"/> <span>Monster Enemies reduce your life by 1 point.</span></div>
+              
+              <div><img src="img/items/crystal-glow.png" width="65px"/> <span>Crystal strengthens your armour that increments your life by 1.</span></div>
+              
+              <div><img src="img/items/golden-key-glow.png" width="65px"/> <span>Get +50 points with every Golden Key!</span></div>
+              
+              <div><img src="img/items/old-key-glow.png" width="65px"/> <span>Old Keys take 50 points from you.</span></div>
+
+              <div><img src="img/items/potion-glow.png" width="65px"/> <span>No risk no glory! Potions will give you random attributes.</span></div>
+          </div>
+          </div>
+  
+          <div id="barbarian-habilities" class="col-3">
+            <h2 class="speed">HEALTH</h2>
+            <img src="img/barbarian/health.png" />
+            <h2 class="speed">SPEED</h2>
+            <img src="img/barbarian/speed.png" />
+          </div>
+  
+        </div>
+      </div>    
+      <div id="gameover" class="home hideScreen">
+            <img src="img/gameover1.png" />
+              <div class="score-and-result">
+                  <p id="finalScore">Your score is:</p>
+                <button id="restart" onclick="window.location.href='index.html'">RESTART</button>
+              </div>
+      </div>
+    </div>
+  <script src="js/globals.js"></script>
+  <script src="js/items/items.js"></script>
+  <script src="js/items/more-score.js"></script>
+  <script src="js/items/less-score.js"></script>
+  <script src="js/items/armour.js"></script>
+  <script src="js/items/escape.js"></script>
+  <script src="js/items/enemy.js"></script>
+  <script src="js/items/more-time.js"></script>
+  <script src="js/items/less-time.js"></script>
+  <script src="js/items/potion.js"></script>
+  <script src="js/character.js"></script>
+  <script src="js/amazon.js"></script>
+  <script src="js/barbarian.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/generate-maze.js"></script>
+  <script src="js/maze-generator.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+
+.hideScreen {
+  display: none;
+}
+
+html,
+body {  
+  min-height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background-image: url("./../img/mazebg.jpg");
+  background-color: aliceblue;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.home-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+.header-images {
+  display: flex;
+justify-content: space-between;
+}
+
+.amazon-img {
+  height: 300px;
+}
+
+.barbarian-img {
+  height: 300px;
+
+}
+
+.centerlogo {
+  height: 265px;
+  margin-left: 58px;
+  margin-top: -15px;
+}
+
+.habilities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-3 {
+  width: 25%
+}
+
+h2 {
+  color: white;
+  font-family: 'Staatliches', cursive;
+  padding-top: 7%
+}
+
+#amazon-habilities {
+  text-align: left;
+}
+
+.player h1 {
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+  font-size: 40px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  color: lightgrey;
+  text-shadow: 0 0 8px black;
+  margin-top: -15%;
+  margin-bottom: 5%;
+}
+
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#helpButton {
+  position: absolute;
+  font-family: 'Staatliches', cursive;
+  text-align: center;
+  color: #000000;
+  background-color: #d8d8d8;
+  border: 2px solid;
+  font-size: 17px;
+  letter-spacing: 5px;
+  line-height: 1;
+  margin-top: 715px;
+  margin-left: 625px;
+  width: 79px;
+  padding: 10px;
+  padding-right: 8px;
+  border-radius: 10px;
+}
+
+#helpButton a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#helpButton a:hover {
+  text-decoration: none;
+  background-color: #000000;
+  color: #ff0000;
+}
+
+#helpButton:hover {
+  background-color: #000000;
+  color: #ff0000;
+}
+
+#back {
+  position: absolute;
+  font-family: 'Staatliches', cursive;
+  text-align: center;
+  color: #000000;
+  background-color: #d8d8d8;
+  border: 2px solid;
+  font-size: 17px;
+  letter-spacing: 5px;
+  line-height: 1;
+  margin-left: 725px;
+  margin-top: 15px;
+  width: 79px;
+  padding: 10px;
+  padding-right: 8px;
+  border-radius: 10px;
+}
+
+#back a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#back a:hover {
+  text-decoration: none;
+  background-color: #000000;
+  color: #ff0000;
+}
+
+#back:hover {
+  background-color: #000000;
+  color: #ff0000;
+}
+
+.col-5 {
+  margin: auto;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 1em 2.5em;
+  background: radial-gradient(#000000cc, #00000030);
+  border-radius: 10px;
+}
+
+.instructions div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom:3%;
+}
+
+.instructions img {
+  padding-right: 4%;
+}
+
+.helpInstructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  background: radial-gradient(#000000d3, #00000030);
+  border-radius: 10px;
+  width: 700px;
+  margin-left: 410px;
+}
+
+.helpInstructions h1 {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Staatliches', cursive;
+  color: lightgrey;
+  text-shadow: 0 0 8px black;
+}
+
+.helpInstructions h2 {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Staatliches', cursive;
+  color: lightgrey;
+  text-shadow: 0 0 8px black;
+}
+
+.helpInstructions span {
+  font-size: 16.5px;
+  text-shadow: 0 0 8px rgb(120, 120, 120);
+}
+
+.helpInstructions div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-left: 200px;
+}
+
+.helpInstructions p {
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
+  font-size: 17px;
+  text-shadow: 0 0 8px black;
+}
+
+.helpInstructions img {
+  padding-right: 4%;
+  padding-left: 10px;
+  box-shadow: #ffffff;
+}
+
+.titleInstructions {
+  margin-top: 110px;
+  margin-left: 350px;
+  height: 150px;
+}
+
+#barbarian-habilities {
+  text-align: right;
+}
+
+/*  ---------------------------------- */
+
+.container-game {
+  margin-top:4%;
+}
+
+canvas {
+  background: radial-gradient(#ff875f, #1a1f54e7);
+  /* background-color: blanchedalmond; */
+   border: 1px solid black;
+  max-height: 90vh;
+  max-width: 100vw;
+  width: 84%;
+  border-radius: 10px;
+}
+
+#time,
+#score,
+#life,
+#speed,
+#restart,
+button {
+  font-family: 'Staatliches', cursive;
+  text-align: center;
+  color: #000000;
+  background-color: #d8d8d8;
+  border: 2px solid;
+  font-size: 17px;
+  letter-spacing: 5px;
+  line-height: 1;
+  padding: 1em 1em;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #000000;
+  color: #ff0000;
+}
+
+#gameover {
+  margin-top: 0%;
+  max-height: 100vh;
+  flex-direction:column;
+}
+
+#gameover img {
+  margin-top: 5%;
+  align-self: center;
+  height: 450px;
+}
+
+.score-and-result {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 40%;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+}
+
+#gameover button:hover {
+  background-color: #000000;
+  color: #ff0000;
+}
+
+
+#finalScore {
+  background-color: #050505a4;
+  color: #c2c2c2;
+  transition: 7s;
+  width: auto;
+  border: 2px solid #c2c2c2;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 5px;
+  line-height: 1;
+  margin: 0.5em;
+  margin-left: 0.3em;
+  padding: 1em 2em;
+  border-radius: 10px;
+}
+
+
+#help {
+  margin-top: 0%;
+  max-height: 100vh;
+  flex-direction:column;
+}
