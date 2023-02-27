@@ -1,3 +1,7 @@
+// JavaScript file dedicated for the two characters in general
+
+// Parent class of Characters
+// Shared characteristics of Amazon and Barbarian character
 class Character {
   constructor(game) {
     this.game = game;
@@ -32,6 +36,7 @@ class Character {
     this.game.context.drawImage(this.image, this.col + this.game.center, this.row, this.cellWidth/2,this.cellHeight);
   }
   
+  // Arrow Keys Movement
   move(direction) {
     switch (direction) {
       case 'up':
@@ -50,7 +55,7 @@ class Character {
     this.checkItemOrEnemy();
   }
 
-  //SPRITERS 
+  // SPRITERS 
   spritersUp() {
     if (this.spritersUpImage === 0) {
       this.image = this.images.up1;

@@ -1,3 +1,4 @@
+// JavaScript file dedicated for Arrow Keys controls
 class Controls {
   constructor(game) {
     this.game = game;

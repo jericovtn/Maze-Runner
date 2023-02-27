@@ -1,3 +1,4 @@
+// JavaScript file dedicated to the Game Proper
 class Game {
   constructor(canvas) {
     this.canvas = canvas;
@@ -15,7 +16,7 @@ class Game {
   }
 
   setUpGame (level) {
-    //game size config
+    // Game Size Configuration
     this.level = level;
     this.rows = this.level;
     this.columns = this.level;
@@ -23,16 +24,17 @@ class Game {
     this.cellHeight = parseInt(this.height / this.rows);
     this.center = parseInt((this.cellWidth / 2) / 2);
 
-    //generate maze
+    // Generate Maze
     this.maze = new MazeGenerator(this);
 
-    //items
+    // Items
     this.items = [];
     this.enemies = [new Enemy(this), new Enemy(this)];
     for (let i = 0; i < 1 + (this.level - 10) / 2; i++) {
       this.enemies.push(new Enemy(this));
     }
 
+    // Setting the Probability of Appearance of Each Item 
     const probabilityOfHavingItems = 1 + (this.level - 10) / 3;
 
     for (let i = 0; i < probabilityOfHavingItems; i++) {
@@ -56,10 +58,12 @@ class Game {
     this.escape = new Escape(this);
   }
 
+  // Reset the Game
   reset() {
     this.setUpGame(10);
   }
-
+  
+  // Level Up the Game by 1 if player escape the Maze 
   levelUp() {
     this.setUpGame(this.level + 1);
     this.character.row = 0;
@@ -69,8 +73,8 @@ class Game {
     this.gameScore += parseInt((((this.character.time - this.timer / 1000)) * 2));
   }
 
+  // React to whatever control is pressed
   handleControl(direction) {
-    // React to whatever control is pressed
     switch (direction) {
       case 'up':
         this.character.move('up');
@@ -87,6 +91,7 @@ class Game {
     }
   }
 
+  // Show Home Screen
   homeGame() {
     this.hideScreen('canvas')
     this.showScreen('home')
@@ -94,6 +99,7 @@ class Game {
     this.hideScreen('gameover')
   }
 
+  // Start the Game
   startGame() {
     this.loop(0);
   }
@@ -106,18 +112,18 @@ class Game {
     window.requestAnimationFrame((timestamp) => this.loop(timestamp));
   }
 
-  // Hide specific screen
+  // Hide Specific screen
   hideScreen(id) {
     let screen = document.getElementById(id);
     screen.style.display = "none";
   }
-  // Show specific screen
+  // Show Specific screen
   showScreen(id) {
     let screen = document.getElementById(id);
     screen.style.display = "flex";
   }
 
-  //Show Canvas Screen
+  // Show Canvas Screen
   showCanvasScreen(character) {
     switch (character) {
       case 'amazon':
@@ -170,12 +176,16 @@ class Game {
     this.escape.draw();
     this.character.draw()
   }
+
+  // Check if Game is Over
   checkGameOver() {
     if (parseInt(this.gameTime) < 0) {
       console.log('epa')
       this.gameOver()
     }
   }
+
+  // Game Over Page
   gameOver() {
     this.hideScreen('canvas');
     this.hideScreen('scorescreen');

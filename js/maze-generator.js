@@ -1,4 +1,6 @@
-      //--------RANDOM PATTERN
+// JavaScript file dedicated to Maze Walls design
+
+//--------RANDOM PATTERN
       
       let bigsand = './../img/walls/ground.png'
       let bricks = './../img/walls/bricks.png'

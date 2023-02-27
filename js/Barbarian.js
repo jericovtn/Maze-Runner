@@ -1,7 +1,9 @@
-
+// JavaScript File dedicated for the  Barbarian character (Sprite, Controls, Characters)
 const barbarianImage = new Image();
 barbarianImage.src = './../img/barbarian/barbarian-right-1.png';
 
+// Child class (Barbarian) of Parent class (Character)
+// Specifies the unique characteristics of the Barbarian character (Time, Life, Sprite)
 class Barbarian extends Character {
   constructor(game) {
     super(game);
@@ -11,6 +13,7 @@ class Barbarian extends Character {
     this.image = barbarianImage;
     this.life = 7;
     this.time = 60*3;
+    
     this.setSprites({
       up1: './../img/barbarian/barbarian-up-1.png',
       up2: './../img/barbarian/barbarian-up-2.png',

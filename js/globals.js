@@ -1,3 +1,4 @@
+// JavaScript file dedicated for Global variables
 // Initialize the canvas
 
 // Constants

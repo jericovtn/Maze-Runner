@@ -1,6 +1,9 @@
+// JavaScript File dedicated for the Amazon character (Sprite, Controls, Characters)
 const amazonImage = new Image();
 amazonImage.src = './../img/Amazon/amazon-right-1.png';
 
+// Child class (Amazon) of Parent class (Character)
+// Specifies the unique characteristics of the Amazon character (Time, Life, Sprite)
 class Amazon extends Character {
   constructor(game) {
     super(game);
@@ -14,6 +17,7 @@ class Amazon extends Character {
     this.life = 4;
     // this.horizontalSpeed = CELL_WIDTH;
     // this.verticalSpeed = CELL_HEIGHT;
+
     this.setSprites({
       up1: './../img/amazon/amazon-up-1.png',
       up2: './../img/amazon/amazon-up-2.png',

@@ -1,3 +1,4 @@
+// JavaScript file dedicated for generating random maze puzzle
 'use strict';
 
 const generateMaze = (options) => {
