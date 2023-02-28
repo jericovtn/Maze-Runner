@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <div id="help" class="helpPage">
+    <audio id="bgm" autoplay="" loop="" src="sounds/bgm1.mp3"></audio>
+        <div id="help" class="helpPage">
         <img class="titleInstructions" src="img/instructions.png" />
         <div class="helpInstructions">
             <!-- Instructions -->
@@ -29,5 +30,9 @@
         </div>
         <button id="back"><a href="index.html">BACK</a></button>
     </div>
+    <script>
+      var vid = document.getElementById("bgm");
+      vid.volume = 0.6;
+    </script>
   </body>
   

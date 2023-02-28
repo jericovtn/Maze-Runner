@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    <audio id="bgm" autoplay="" loop="" src="sounds/bgm1.mp3"></audio>
     <div class="container-fluid d-flex row justify-content-around container-game">
     
         <div id="scorescreen" class="hideScreen flex-column nowrap justify-content-between">
@@ -117,6 +117,10 @@
   <script src="js/game.js"></script>
   <script src="js/main.js"></script>
   <script src="js/index.js"></script>
+  <script>
+    var vid = document.getElementById("bgm");
+    vid.volume = 0.6;
+  </script>
 </body>
 
 </html>
